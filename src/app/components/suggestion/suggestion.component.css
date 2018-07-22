@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fill {
+    min-height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper-name {
+    align-self: flex-end;
+    background-color: yellow;
+    padding-left:10vh;
+}
+
+.wrapper {
+    background-color: grey;
+    align-self: center;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-column-gap: 4vh;
+    grid-row-gap: 3vh;
+    padding-top: 25vh;
+    padding-left:25vh;
+    padding-bottom: 2vh;
+}
+
+.content-wrapper-pic {
+    background-image:url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532192883/koyasan2.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.content-wrapper-map {
+    background-image:url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532215424/samplemap.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+
+
+.content-wrapper-description {
+    display:flex;
+    align-self: flex-end;
+    width: 60%;
+    margin-right:30vh;
+}
+
+button {
+    align-self: center;
+}
+
+
