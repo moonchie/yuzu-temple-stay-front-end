@@ -1,9 +1,10 @@
+// import modules
 import { Component, OnInit } from '@angular/core';
-//
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../../app-routing.module';
+// import children components
 import { SplashComponent } from '../splash/splash.component';
 import { SuggestionComponent } from '../suggestion/suggestion.component';
 import { SeeAllDivComponent } from '../see-all-div/see-all-div.component';
@@ -17,10 +18,10 @@ import { ContactInfoComponent } from '../contact-info/contact-info.component';
   styleUrls: ['./landing-page.component.css']
 })
 
-//
+// Add in NgModule to include children components
 @NgModule({
   declarations: [
-    //level 2 components
+    //children components
     LandingPageComponent,
     SplashComponent,
     SuggestionComponent,
