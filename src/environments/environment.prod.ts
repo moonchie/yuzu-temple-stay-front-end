@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+
+  // PRODUCTION backendURL is just the empty string (this time both on same domain)
+  backendUrl:""
 };

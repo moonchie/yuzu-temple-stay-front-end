@@ -7,25 +7,33 @@
     min-height: 100%;
     height:100%;
     /* border: 1px orange dashed; */
-        /* for z index */
+    /* for z index */
     position: relative;
 }
 
+h1{
+    font-size: 10vh;
+    font-weight: 800;
+    font-family: "Dosis";
+    text-shadow: 2px 2px gold;
+    padding-left: 5vw
+}
+
 .name-wrapper {
-    width:100vh;
-    height: 10vh;
-    position:absolute;
+    background-image: url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532281322/half-noodle_2x.png");
+    background-size: 60%;
+    background-position: 0% 45%;
+    background-repeat: no-repeat;
+    width: 100vh;
+    height: auto;
+    position: absolute;
     z-index: 2;
     left: 70vh;
     top: 15vh;
     text-align: center;
 }
 
-.h1{
-    /* padding-left: 5vh; */
-    vertical-align:middle;
-    background: yellow;
-}
+
 
 .text-wrapper {
     width:100vh;
@@ -80,13 +88,22 @@
     height: 80%;
     width: 80%;
     align-self: center;
+    background-image: url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532192891/koyasan5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
+
+/* REPLACE WITH GOOGLE MAP */
 .map {
     background: purple;
     height: 50%;
     width: 100%;
     align-self: flex-end;
-    margin-bottom: 10vh
+    margin-bottom: 10vh;
+    background-image: url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532215424/samplemap.png");
+    background-size: cover;
+    filter: grayscale(1)
 }
 
