@@ -1,58 +1,92 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+  }
 
 .fill {
     min-height: 100%;
+    height:100%;
+    /* border: 1px orange dashed; */
+        /* for z index */
+    position: relative;
+}
+
+.name-wrapper {
+    width:100vh;
+    height: 10vh;
+    position:absolute;
+    z-index: 2;
+    left: 70vh;
+    top: 15vh;
+    text-align: center;
+}
+
+.h1{
+    /* padding-left: 5vh; */
+    vertical-align:middle;
+    background: yellow;
+}
+
+.text-wrapper {
+    width:100vh;
+    height: 20vh;
+    position:absolute;
+    z-index: 2;
+    left: 42vh;
+    top: 90vh;
+
+    font-weight: 400;
+    font-size: 1.5vw
+}
+
+
+/* Imgae wrapper happens below */
+
+.outer-wrapper {
     height: 100%;
+}
+
+
+.placeholder {
+    /* background:orange; */
+    height: 100%;
+}
+
+.content-wrapper {
+    /* background:grey; */
+    height: 100%;
+}
+
+.inner-wrapper {
+    height: 100%
+}
+
+.pic-wrapper {
+    /* background:lightblue; */
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.content-wrapper-name {
-    align-self: flex-end;
-    background-color: yellow;
-    padding-left:10vh;
+.map-wrapper {
+    /* background:lightcoral; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.wrapper {
-    background-color: grey;
-    align-self: center;
-    height: 70%;
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-column-gap: 4vh;
-    grid-row-gap: 3vh;
-    padding-top: 25vh;
-    padding-left:25vh;
-    padding-bottom: 2vh;
-}
-
-.content-wrapper-pic {
-    background-image:url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532192883/koyasan2.jpg");
-    background-repeat: no-repeat;
-    background-size:contain;
-}
-
-.content-wrapper-map {
-    background-image:url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532215424/samplemap.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-}
-
-
-
-.content-wrapper-description {
-    display:flex;
-    align-self: flex-end;
-    width: 60%;
-    margin-right:30vh;
-}
-
-button {
+.picture {
+    background: purple;
+    height: 80%;
+    width: 80%;
     align-self: center;
 }
 
+.map {
+    background: purple;
+    height: 50%;
+    width: 100%;
+    align-self: flex-end;
+    margin-bottom: 10vh
+}
 

@@ -30,20 +30,19 @@
     </div> <!--Carousel-->
 
     <div class="col-5 content">
-      <div class="container content-wrapper">
-        <h3 class="nameENG">Koyasan Ekoin</h3>
-        <p class="nameJPG">Japanese name: 準別格本山 恵光院</p>
-        <p class="address">Address: 497 Koyasan, Koya-cho, Ito-gun, Wakayama-ken</p>
-        <p class="telephon">Telephoe: +81(0)736-56-2514</p>
-        <p class="mealType">Meal type: vegetarian</p>
-        <p class="description">Description: "Eko, meaning transference of merit, was built by Dosho, who was KoboDaishi's own disciple, almost 1200 years ago.</p>
+      <div *ngFor = "let oneTemple of temples" class="container content-wrapper" >
+        <h3 class="nameENG">{{ oneTemple.nameENG }} </h3>
+        <p class="nameJPG">Japanese name: {{ oneTemple.nameJPG }} </p>
+        <p class="address">Address: {{  oneTemple. address }}</p>
+        <p class="telephon">Telephoe: {{  oneTemple. address}}</p>
+        <p class="mealType">Meal type: {{ oneTemple.mealType }}</p>
+        <p class="description">Description: {{  oneTemple.description }}</p>
         <div class="specialties"> Activities:
-          <p>Buddhist morning services</p>
-          <p>Goma fire ritual</p>
-          <p>group meditation</p>
+          <p>{{ oneTemple.specialties[0] }}</p>
+          <p>{{ oneTemple.specialties[1] }}</p>
+          <p>{{ oneTemple.specialties[2] }}</p>
         </div>
       </div>
     </div>  <!--Temple content info-->
-
 
 </section>
