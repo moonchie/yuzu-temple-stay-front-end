@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+.fill {
+    min-height: 100%;
+    height:100%;
+}
+
+.text-outter-wrapper {
+    /* background: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text-inner-wrapper {
+    background-color: white;
+    padding: 5vh 5vh 5vh 20vh
+}
+
+#title {
+    font-size: 3vw;
+    font-family: "Dosis";
+    font-weight: 600;
+}
+
+/* -----                CARDS GAELLERAY */
+.image-outter-wrapper {
+    background: gold;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-inner-wrapper{
+    background-color: pink;
+    flex-grow: 1;
+}
+
+/*                                            Temporary */
+.image {
+    background-image: url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532361641/Yuzu%20project/177414827-612x612.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px white solid;
+}
