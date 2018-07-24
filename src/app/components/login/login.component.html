@@ -1,4 +1,4 @@
-<h2>Log In</h2>
+<!-- <h2>Log In</h2>
 
 <form (ngSubmit)="loginSubmit()">
   <label>
@@ -14,4 +14,39 @@
   <br />
 
   <button>Log In</button>
-</form>
+</form> -->
+
+
+
+<div class="container-fluid fill">
+    <div id="placeholder"></div>
+    <div id="placeholder"></div>
+
+    <div class="container form-wrapper">    <!-- form -->
+    <form (ngSubmit)="loginSubmit()">
+        <h2>Sign in</h2>
+
+        <button type="button" class="btn btn-light btn-lg btn-block google">Sign in with Google</button>
+        <hr />
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email Address</label>
+          <input [(ngModel)]="loginForm.email" name="email" type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input [(ngModel)]="loginForm.loginPassword" name="loginPassword"  type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+        </div>
+
+        <a href="">Forgot your password?</a>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+      </form>
+      <span>Don’t have an account?</span><a routerLink="/register">  Create account</a>
+    </div>  <!--Form-->
+
+    <div id="placeholder"></div>
+    <div id="placeholder"></div>
+  </div>
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
