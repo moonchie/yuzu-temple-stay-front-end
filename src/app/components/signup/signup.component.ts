@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SignupSubmission, AuthService } from '../../auth.service';
+
 
 @Component({
   selector: 'app-signup',
@@ -6,10 +9,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  signupForm: SignupSubmission = new SignupSubmission();
 
-  constructor() { }
+  constructor(
+    public myAuthServ: AuthService,
+    private myRouterServ: Router
+  ) { }
 
   ngOnInit() {
   }
 
+  signupSubmit() {
+    // pass the form inputs to the service
+    this.myAuthServ.postSignup(this.signupForm)
+      .then((response) => {
+        // redirect away to the home page
+        this.myRouterServ.navigateByUrl("/");
+      })
+      .catch((err) => {
+        alert("Sorry! We couldn't sign you up. 🧐");
+        console.log(err);
+      });
+  }
 }

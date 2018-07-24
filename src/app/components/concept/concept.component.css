@@ -1,7 +1,7 @@
 .fill {
     min-height: 100%;
     height:100%;
-    border:1px orange solid;
+    /* border:1px orange solid; */
     display: flex;
     flex-direction: column;
 }
@@ -34,7 +34,8 @@ img {
 }
 
 #caption {
-    background-color: grey;
+    background: #161925;
+    color: #f3efe0
 }
 
 h1  {
@@ -42,6 +43,10 @@ h1  {
     z-index: 2;
     padding: 5vh 15vh;
     margin:  5vh 15vh;
+    font-size: 9vh;
+    font-family: 'Dosis';
+    font-weight: 900;
+    text-shadow: 2px 2px #e3e7af
 }
 
 

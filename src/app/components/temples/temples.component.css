@@ -46,3 +46,10 @@
     background-size: cover;
     border: 3px white solid;
 }
+
+#lotus {
+    width:8em;
+    position: fixed;
+    left: 5vh;
+    top: 5vh;
+}
