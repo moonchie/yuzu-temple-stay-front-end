@@ -3,7 +3,31 @@
     padding: 0;
   }
 
+.fill {
+  height:75%
+}
 
-.fill{
-    height:80%;
+.outer-wrapper {
+    display: flex;
+    flex-direction: row
+}
+
+.info {
+    margin-left: 18%;
+    width:70%
+}
+
+.form {
+    margin-right: 18%;
+    border: 1px #e3e7af solid;
+    height: 80vh
+}
+
+.map-wrapper {
+    background:#e3e7af;
+    height:60vh;
+    margin-top: 5vh;
+    /* margin-right: 18%; */
+    /* margin-left: 18%; */
+
 }

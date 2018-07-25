@@ -1,16 +1,16 @@
 <section class="container-fluid row fill">
   <div class="container" id="title">
-      <h1 class="nameENG">{{ templeItem.nameENG }} </h1>
       <h3 class="nameJP"> {{ templeItem.nameJPG }} </h3>
-      <p class="address">{{ templeItem.address }}</p>
+      <h1 class="nameENG">{{ templeItem.nameENG }} </h1>
 
+      <p class="address"><i class="fas fa-map-marker-alt"></i>{{ templeItem.city }}</p>
   </div>
 
-  <div class="container" id="info">
-    <div class="container-fluid inner-wrapper">
-      <span>{{ templeItem.guests }} guests</span>
-      <span>{{ templeItem.beds }} beds</span>
-      <span>{{ templeItem.bath }} baths</span>
+  <div class="container-fluid" id="info">
+    <div>
+      <span><i class="fas fa-users"></i>{{ templeItem.guests }} guests</span>
+      <span><i class="fas fa-bed"></i>{{ templeItem.beds }} beds</span>
+      <span><i class="fas fa-bath"></i>{{ templeItem.bath }} baths</span>
     </div>
   </div>
 
@@ -18,10 +18,27 @@
     <p>{{ templeItem.description }}</p>
   </div>
   <div class="container" id="amenties">
-    <div class="wifi"> Wifi </div>
-    <div class="essentials"> Essentials </div>
-    <div class="kitchen"> Kitchen </div>
-    <div class="tv"> TV </div>
-    <div class="airconditioning"> Air conditioning </div>
+    <h2 id="amenities">Amenities</h2>
+    <div class="row">
+        <div class="col"><i class="fas fa-wifi"></i>Wifi </div>
+        <div class="col"><i class="fas fa-plane-arrival"></i>Airport pick-up</div>
+        <div class="w-100"></div>
+        <div class="col"><i class="fas fa-utensils"></i>Kitchen</div>
+        <div class="col"><i class="fas fa-parking"></i>Parking </div>
+        <div class="w-100"></div>
+        <div class="col"><i class="fas fa-bicycle"></i>Bike for hire</div>
+      </div>
+    <h2 style="color:#759eb8; padding-top: 1vh; padding-bottom: 2vh; border-bottom:1px #e3e7af solid">Show all 22 amenities</h2>
   </div>
+
+  <div class="container">
+    <h2 id="cancel">Cancellations</h2>
+    <p>Cancel up to 7 days before check-in and get a 50% refund, minus Yuzu service fee.</p>
+  </div>
+
 </section>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">

@@ -1,9 +1,12 @@
 <section class="container row fill">
   <div class="container form-wrapper">
-
       <div class="hotel_reserve_box">
-          <h3> Reservation Form </h3><br>
           <form>
+            <div class="form-group" id="cost-wrapper">
+                <label class="cost"><i class="fas fa-euro-sign"></i>95</label>
+                <span> per night</span>
+                <hr />
+                </div>
               <div class="form-group">
                   <label>Nights</label>
                   <select class="form-control" id="nights" onchange="finalCost()">
@@ -57,10 +60,8 @@
                 </div>
               </div>
               <br>
-              <div class="form-group">
-                  <label>Total Cost (euro) : 95 </label>
-                  <span id="result" style="background-color: #7527b0;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">0</span>
-              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Book</button>
+              <p style="font-size: 80%; text-align: center; padding-top: 1vh">You won't be charged yet.</p>
           </form>
       </div>
 
@@ -68,3 +69,6 @@
   </div> <!--Form-->
 
 </section>
+
+<link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
