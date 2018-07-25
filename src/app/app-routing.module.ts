@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: "temple/:id", component: OneTempleComponent},
   { path: "authentication", component: LoginComponent},
   { path: "register", component: SignupComponent},
-  { path: "reservation/:userID", component: BookingCheckComponent},
+  { path: "needconfirm", component: BookingCheckComponent},
   { path: "confirmation", component: FinishedComponent},
   { path: "history", component: BookingHistoryComponent},
   { path: "**", component: NotFoundPageComponent},

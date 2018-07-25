@@ -5,7 +5,6 @@ import { environment } from '../environments/environment';
 
 const { backendUrl } = environment;
 
-// const backendUrl = "http://localhost:3000"
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +29,9 @@ export class TempleService {
       .toPromise();
   }
 }
+
+
+// Temple class
   export class Temple {
     _id: string;
     nameENG: string;

@@ -4,8 +4,7 @@ import { TempleInfoComponent } from '../temple-info/temple-info.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { DynamicFormComponent } from '../dynamic-form/dynamic-form.component';
-import { QuestionService } from '../../question.service';
+
 import { TempleService, Temple } from '../../temple.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -21,7 +20,6 @@ import { ActivatedRoute, Router } from '@angular/router';
     OneTempleComponent,
     TempleSplashComponent,
     TempleInfoComponent,
-    DynamicFormComponent
   ],
   imports: [
     BrowserModule,

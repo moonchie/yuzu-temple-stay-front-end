@@ -26,10 +26,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { BookingCheckComponent } from './components/booking-check/booking-check.component';
 import { FinishedComponent } from './components/finished/finished.component';
 import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
-import { UserInfoComponent } from './components/user-info/user-info.component';
 import { BookingDetailsComponent } from './components/booking-details/booking-details.component';
-import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
-import { DynamicFormQuestionComponent } from './components/dynamic-form-question/dynamic-form-question.component';
 import { ReserveFormComponent } from './components/reserve-form/reserve-form.component';
 
 
@@ -54,10 +51,7 @@ import { ReserveFormComponent } from './components/reserve-form/reserve-form.com
     BookingCheckComponent,
     FinishedComponent,
     BookingHistoryComponent,
-    UserInfoComponent,
     BookingDetailsComponent,
-    DynamicFormComponent,
-    DynamicFormQuestionComponent,
     ReserveFormComponent,
 
   ],
