@@ -1,0 +1,70 @@
+<section class="container row fill">
+  <div class="container form-wrapper">
+
+      <div class="hotel_reserve_box">
+          <h3> Reservation Form </h3><br>
+          <form>
+              <div class="form-group">
+                  <label>Nights</label>
+                  <select class="form-control" id="nights" onchange="finalCost()">
+                      <option value="0"> 0 </option>
+                      <option value="1"> 1 </option>
+                      <option value="2"> 2 </option>
+                      <option value="3"> 3 </option>
+                      <option value="4"> 4 </option>
+                      <option value="5"> 5 </option>
+                      <option value="6"> 6 </option>
+                      <option value="7"> 7 </option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label>Date</label>
+                <div class='input-group date' id='datetimepicker'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                <!-- Date script -->
+                <script type="text/javascript">
+                  $(function () {
+                      $(`#datetimepicker`).datetimepicker({
+                        dateFormat: "dd,MM,yy",
+                      });
+                  });
+                </script>
+
+            </div>
+              <div class="form-group">
+                  <label>Guests</label>
+                  <select class="form-control" id="child_number" onchange="finalCost()">
+                      <option value="0"> 0 </option>
+                      <option value="1"> 1 </option>
+                      <option value="2"> 2 </option>
+                      <option value="3"> 3 </option>
+                      <option value="4">4 guests maximum. Infants don’t count toward the number of guests.</option>
+                  </select>
+              </div>
+<!-- checkbox -->
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1">
+                    <label class="form-check-label" for="gridCheck1">
+                      I have read the <a href="#">House Rules</a> of this temple.
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                  <label>Total Cost (euro) : 95 </label>
+                  <span id="result" style="background-color: #7527b0;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">0</span>
+              </div>
+          </form>
+      </div>
+
+
+  </div> <!--Form-->
+
+</section>

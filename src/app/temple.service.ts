@@ -14,23 +14,36 @@ const { backendUrl } = environment;
 export class TempleService {
   constructor(private myHttpServ: HttpClient) {}
 
+  // GET all telples /api/temples
   getList() {
     return this.myHttpServ
       .get(`${backendUrl}/api/temples`)
       .toPromise();
-  }}
+  }
 
+  // GET /api/temple/:id
+  getTempleItem(id) {
+    return this.myHttpServ
+      .get(`${backendUrl}/api/temple/${id}`,
+        { withCredentials: true }
+      )
+      .toPromise();
+  }
+}
   export class Temple {
     _id: string;
     nameENG: string;
     nameJPG: string;
     address: string;
-    telephone: string;
-    email: string;
+    contact: string;
     city: string;
-    picture: Array<string>;
     description: string;
-    specialties: Array<string>;
-    mealType: string
+    guests: string;
+    beds: string;
+    bath: string;
+    price: number;
+    Amentities: Array<object>;
+    pictures: Array<number>;
+    geoLocation: Array<number>
   }
 

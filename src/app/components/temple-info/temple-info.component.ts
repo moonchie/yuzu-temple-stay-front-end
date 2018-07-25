@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TempleService, Temple } from '../../temple.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'section-temple-info',
@@ -7,23 +8,33 @@ import { TempleService, Temple } from '../../temple.service';
   styleUrls: ['./temple-info.component.css']
 })
 export class TempleInfoComponent implements OnInit {
-  // import Temple service here
-  temples: Array<Temple> = [];
+  id: string;
+  templeItem: Temple;
 
-  constructor(private yuzuTempleService: TempleService) { }
+  constructor(
+    private myTempleServ: TempleService,
+    private myActivatedRouteServ: ActivatedRoute,
+    private myRouterServ: Router) { }
 
   ngOnInit() {
-    this.fetchTemples()
+    this.myActivatedRouteServ.paramMap
+      .subscribe((myParams) => {
+        // "phoneId" comes from the route's PATH
+        // { path: "phone/:phoneId", ... }
+        this.id = myParams.get("id");
+        this.fetchtempleDetails();
+      });
   }
 
-  fetchTemples() {
-    this.yuzuTempleService.getList()
-      .then((response: Array<Temple>) => {
-        this.temples = response;
+  fetchtempleDetails() {
+    this.myTempleServ.getTempleItem(this.id)
+      .then((response: Temple) => {
+        // connects the DATA from the API to the COMPONENT state
+        this.templeItem = response;
       })
       .catch((err) => {
-        alert("There is so;ething wrong we cant get the list of our temples");
-        console.log(err)
-      })
+        alert("Sorry! There was a problem getting this temple");
+        console.log(err);
+      });
   }
 }

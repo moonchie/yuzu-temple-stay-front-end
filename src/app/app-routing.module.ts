@@ -17,7 +17,7 @@ import { BookingHistoryComponent } from './components/booking-history/booking-hi
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
   { path: "temples", component: TemplesComponent},
-  { path: "templeId", component: OneTempleComponent},
+  { path: "temple/:id", component: OneTempleComponent},
   { path: "authentication", component: LoginComponent},
   { path: "register", component: SignupComponent},
   { path: "reservation/:userID", component: BookingCheckComponent},
