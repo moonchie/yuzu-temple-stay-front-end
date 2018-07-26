@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 import { Temple } from '../../temple.service';
 import { BookingSubmission, BookingService } from '../../booking.service';
+import { AuthService } from '../../auth.service';
+import { Router } from '@angular/router';
 
 declare var $: any;
 
@@ -10,14 +12,22 @@ declare var $: any;
   styleUrls: ['./reserve-form.component.css']
 })
 export class ReserveFormComponent implements OnInit, AfterViewInit {
-  @Input() temple: Temple;
+  @Input()
+  temple: Temple;
   bookingForm = new BookingSubmission();
 
   constructor(
-    private myBookingService: BookingService
+    private myBookingService: BookingService,
+    private myAuthService: AuthService,
+    public myRouterServ: Router
   ) { }
 
   ngOnInit() {
+    this.myAuthService.check()
+  .catch((err) => {
+    alert("We cant log in you");
+    console.log(err)
+  })
   }
 
   ngAfterViewInit() {
@@ -31,12 +41,17 @@ export class ReserveFormComponent implements OnInit, AfterViewInit {
   }
 
   bookingSubmit() {
-    this.bookingForm.templeID = this.temple._id;
+    this.bookingForm.temple = this.temple;
     this.myBookingService.unconfirmedBooking = this.bookingForm;
 
     // if logged in
-      // navigate to confirmation page
-    // else
+    if(this.myAuthService.currentUser){
+    // navigate to confirmation page
+    this.myRouterServ.navigateByUrl("/booking-confirmation");
+    } else {
       // navigate to log in
+    this.myRouterServ.navigateByUrl("/authentication");
+    }
+
   }
 }

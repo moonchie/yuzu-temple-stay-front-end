@@ -1,3 +1,21 @@
+
+/* Dropdown menu */
+#drpDownMenu {
+    position: fixed;
+    display: block;
+    right: 10vh;
+    top: 10vh;
+}
+#dropdownMenuButton {
+    background-color: #161925;
+    color: #f3efe0;
+    height: 10vh;
+    width: 10vh;
+    font-size: 50%
+}
+
+
+
 footer{
     margin:0;
     padding:0;
@@ -7,3 +25,27 @@ footer{
     font-size: 12px;
     padding-top: 5vh
 }
+
+/* LOGO and lotus */
+#lotus {
+    width:8em;
+    position: fixed;
+    left: 5vh;
+    top: 5vh;
+}
+
+#lotus-animation {
+    height: 8%;
+    width: 80%;
+    display: inline-block;
+    /* border:1px red solid */
+}
+
+#logo {
+    display: inline-block;
+    font-family: "Dosis";
+    font-weight: 800;
+    text-align: center;
+    padding-left: 10px
+}
+

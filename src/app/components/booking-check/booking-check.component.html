@@ -1,3 +1,33 @@
-<p>
-  booking-check works!
-</p>
+
+<div class="container-fluid fill">
+  <div class="container form-wrapper">    <!-- form -->
+    <form>
+      <div class="form-group">
+        <label>Temple Name</label>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+      </div>
+      <div class="form-group">
+          <label>Guests</label>
+          <p>{{placeHolder.guests}}</p>
+      </div>
+      <div class="form-group">
+          <label>First Name {{currentUser.firstName}}</label>
+      </div>
+      <div class="form-group">
+          <label>Last Name</label>
+      </div>
+      <div class="form-group">
+          <label>Contact email</label>
+      </div>
+      <div class="form-group">
+          <label>Total cost: {{placeHolder.temple.price}} x {{placeHolder.nights}} = {{totalCost}} </label>
+      </div>
+        <button type="submit" (click) = "postBookingSubmission()" class="btn btn-primary btn-lg btn-block">Agree and book</button>
+      </form>
+
+    </div>  <!--Form-->
+  </div>
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">

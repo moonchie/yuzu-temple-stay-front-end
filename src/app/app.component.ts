@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 
 @Component({
@@ -9,5 +10,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+constructor(
+  public myAuthService: AuthService
+){}
+
+ngOnInit(){
+  this.myAuthService.check()
+  .catch((err) => {
+    alert("We cant log in you");
+    console.log(err)
+  })
+}
+
+//logout
+logoutClick(){
+  this.myAuthService.logout()
+  .catch((err) => {
+    alert("babababab")
+    console.log(err)
+  })
+}
 
 }

@@ -15,19 +15,30 @@ export class BookingService {
 
 
   // GET the confirmation form
-
+  getBookingSubmission() {
+    return this.myHttpServ
+      .get(`${backendUrl}/api/booking-confirmation`,
+      { withCredentials: true })
+      .toPromise()
+  }
 
   // GET User's booking history
   getHistory() {
     return this.myHttpServ
       .get(`${backendUrl}/api/history`,
-        { withCredentials: true }
-      )
+        { withCredentials: true })
+      .toPromise();
+  }
+  // POST booking to the database
+  postBookingData(dataToBackend) {
+    // console.log(dataToBackend)
+    return this.myHttpServ
+      .post(`${backendUrl}/api/booking-process`,
+      {dataToBackend},
+      {withCredentials:true})
       .toPromise();
   }
 }
-
-  // POST booking to the database
 
 
 
@@ -48,5 +59,5 @@ export class BookingSubmission {
   nights: number;
   guests: number;
   date: string;
-  templeID: string;
+  temple: object;
 }

@@ -1,39 +1,3 @@
-#lotus {
-    width:8em;
-    position: fixed;
-    left: 5vh;
-    top: 5vh;
-}
 
-#lotus-animation {
-    height: 8%;
-    width: 80%;
-    display: inline-block;
-    /* border:1px red solid */
-}
-
-#logo {
-    display: inline-block;
-    font-family: "Dosis";
-    font-weight: 800;
-    text-align: center;
-    padding-left: 10px
-}
-
-
-/* Dropdown menu */
-#drpDownMenu {
-    position: fixed;
-    display: block;
-    right: 5vh;
-    top: 0vh;
-}
-#dropdownMenuButton {
-    background-color: #161925;
-    color: #f3efe0;
-    height: 72px;
-    width: 72px;
-    font-size: 50%
-}
 
 
