@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginSubmission, AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
+import { BookingService } from '../../booking.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     public myAuthServ: AuthService,
-    public myRouterServ: Router
+    public myRouterServ: Router,
+    private myBookingService: BookingService
   ) { }
 
   ngOnInit() {
@@ -22,8 +24,13 @@ export class LoginComponent implements OnInit {
     // pass the form inputs to the service
     this.myAuthServ.postLogin(this.loginForm)
       .then((response) => {
-        // redirect away to the home page
-        this.myRouterServ.navigateByUrl("/");
+        if (this.myBookingService.unconfirmedBooking) {
+          this.myRouterServ.navigateByUrl("/booking-confirmation");
+        }
+        else {
+          // redirect away to the home page
+          this.myRouterServ.navigateByUrl("/");
+        }
       })
       .catch((err) => {
         alert("Sorry! There was a problem with your login. 😓");

@@ -9,6 +9,8 @@ const { backendUrl } = environment;
   providedIn: 'root'
 })
 export class BookingService {
+  unconfirmedBooking: BookingSubmission;
+
   constructor(private myHttpServ: HttpClient) {}
 
 
@@ -40,4 +42,11 @@ export class Booking {
   date: String;
   guests: String;
   cost: Number
+}
+
+export class BookingSubmission {
+  nights: number;
+  guests: number;
+  date: string;
+  templeID: string;
 }

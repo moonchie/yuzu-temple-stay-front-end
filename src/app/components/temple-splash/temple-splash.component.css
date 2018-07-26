@@ -5,10 +5,13 @@
   border: 1px red solid;
 }
 
-
 .carousel-inner {
-  height: 70vh
+  height: 70vh;
 }
 
+.img  {
+    height: auto;
+    width: 100%
+}
 
 

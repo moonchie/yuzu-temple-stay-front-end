@@ -1,21 +1,21 @@
 <section class="container-fluid row fill">
   <div class="container" id="title">
-      <h3 class="nameJP" > {{ templeItem.nameJPG }} </h3>
-      <h1 class="nameENG">{{ templeItem.nameENG }} </h1>
+      <h3 class="nameJP" > {{ templeItem?.nameJPG }} </h3>
+      <h1 class="nameENG">{{ templeItem?.nameENG }} </h1>
 
-      <p class="address"><i class="fas fa-map-marker-alt"></i>{{ templeItem.city }}</p>
+      <p class="address"><i class="fas fa-map-marker-alt"></i>{{ templeItem?.city }}</p>
   </div>
 
   <div class="container-fluid" id="info">
     <div>
-      <span><i class="fas fa-users"></i>{{ templeItem.guests }} guests</span>
-      <span><i class="fas fa-bed"></i>{{ templeItem.beds }} beds</span>
-      <span><i class="fas fa-bath"></i>{{ templeItem.bath }} baths</span>
+      <span><i class="fas fa-users"></i>{{ templeItem?.guests }} guests</span>
+      <span><i class="fas fa-bed"></i>{{ templeItem?.beds }} beds</span>
+      <span><i class="fas fa-bath"></i>{{ templeItem?.bath }} baths</span>
     </div>
   </div>
 
   <div class="container" id="description">
-    <p>{{ templeItem.description }}</p>
+    <p>{{ templeItem?.description }}</p>
   </div>
   <div class="container" id="amenties">
     <h2 id="amenities">Amenities</h2>

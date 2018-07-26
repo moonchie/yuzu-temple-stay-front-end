@@ -1,15 +1,15 @@
 <section class="container row fill">
   <div class="container form-wrapper">
       <div class="hotel_reserve_box">
-          <form>
+          <form (ngSubmit)="bookingSubmit()">
             <div class="form-group" id="cost-wrapper">
-                <label class="cost"><i class="fas fa-euro-sign"></i>95</label>
+                <label class="cost"><i class="fas fa-euro-sign"></i>{{temple?.price}}</label>
                 <span> per night</span>
                 <hr />
                 </div>
               <div class="form-group">
                   <label>Nights</label>
-                  <select class="form-control" id="nights" onchange="finalCost()">
+                  <select [(ngModel)]="bookingForm.nights" name="nights" class="form-control" id="nights">
                       <option value="0"> 0 </option>
                       <option value="1"> 1 </option>
                       <option value="2"> 2 </option>
@@ -21,26 +21,17 @@
                   </select>
               </div>
               <div class="form-group">
-                <label>Date</label>
-                <div class='input-group date' id='datetimepicker'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+                <div class="input-group date" id="datetimepicker" data-target-input="nearest">
+                    <input name="date" type="text" class="form-control datetimepicker-input" data-target="#datetimepicker"/>
+                    <div class="input-group-append" data-target="#datetimepicker" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
                 </div>
-                <!-- Date script -->
-                <script type="text/javascript">
-                  $(function () {
-                      $(`#datetimepicker`).datetimepicker({
-                        dateFormat: "dd,MM,yy",
-                      });
-                  });
-                </script>
-
             </div>
+
               <div class="form-group">
                   <label>Guests</label>
-                  <select class="form-control" id="child_number" onchange="finalCost()">
+                  <select [(ngModel)]="bookingForm.guests" name="guests" class="form-control" id="child_number">
                       <option value="0"> 0 </option>
                       <option value="1"> 1 </option>
                       <option value="2"> 2 </option>
@@ -69,6 +60,8 @@
   </div> <!--Form-->
 
 </section>
+
+<pre>{{bookingForm | json}}</pre>
 
 <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">

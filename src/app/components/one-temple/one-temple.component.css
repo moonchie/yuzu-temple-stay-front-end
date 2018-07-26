@@ -5,8 +5,8 @@
 
 .fill {
   height:75%;
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 .outer-wrapper {
