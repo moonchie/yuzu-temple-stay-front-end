@@ -3,8 +3,8 @@
       <div class="hotel_reserve_box">
           <form (ngSubmit)="bookingSubmit()">
             <div class="form-group" id="cost-wrapper">
-                <label class="cost"><i class="fas fa-euro-sign"></i>{{temple?.price}}</label>
-                <span> per night</span>
+                <label class="cost"><i class="fas fa-euro-sign"></i>{{temple?.price}} </label>
+                <span>  per night</span>
                 <hr />
                 </div>
               <div class="form-group">
@@ -24,7 +24,7 @@
                 <div class="input-group date" id="datetimepicker" data-target-input="nearest">
                     <input name="date" type="text" class="form-control datetimepicker-input" data-target="#datetimepicker"/>
                     <div class="input-group-append" data-target="#datetimepicker" data-toggle="datetimepicker">
-                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        <div class="input-group-text"><i class="fas fa-calendar-alt" style="margin-top: 1.5vh; font-size: 130%"></i></div>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
 
 </section>
 
-<pre>{{bookingForm | json}}</pre>
+<!-- <pre>{{bookingForm | json}}</pre> -->
 
 <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">

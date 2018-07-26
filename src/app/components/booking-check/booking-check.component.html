@@ -1,33 +1,37 @@
-
 <div class="container-fluid fill">
-  <div class="container form-wrapper">    <!-- form -->
-    <form>
-      <div class="form-group">
-        <label>Temple Name</label>
-      </div>
-      <div class="form-group">
-        <label>Date</label>
-      </div>
-      <div class="form-group">
-          <label>Guests</label>
-          <p>{{placeHolder.guests}}</p>
-      </div>
-      <div class="form-group">
-          <label>First Name {{currentUser.firstName}}</label>
-      </div>
-      <div class="form-group">
-          <label>Last Name</label>
-      </div>
-      <div class="form-group">
-          <label>Contact email</label>
-      </div>
-      <div class="form-group">
-          <label>Total cost: {{placeHolder.temple.price}} x {{placeHolder.nights}} = {{totalCost}} </label>
-      </div>
-        <button type="submit" (click) = "postBookingSubmission()" class="btn btn-primary btn-lg btn-block">Agree and book</button>
-      </form>
+    <div class="container form-wrapper">    <!-- form -->
+      <h1>Review booking details</h1>
+      <form>
+        <div class="form-group">
+          <label class="templeName"><i class="far fa-map" style="color: #ffc72c; margin-right: 1vh "></i>{{this.placeHolder.temple.nameENG}}</label>
+        </div>
+        <div class="form-group">
+          <label class="dates"><i class="far fa-calendar-alt"></i> {{this.placeHolder.date | date:'dd/MM/yyyy'}}</label>
+        </div>
+        <div class="form-group">
+          <label class="guests"><i class="far fa-user"></i> {{placeHolder.guests}} guests</label>
+        </div>
+        <div class="form-group">
+          <label class="guests"><i class="far fa-moon"></i> {{placeHolder.nights}} nights</label>
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="firstName">First name: {{currentUser.firstName}}</label>
+        </div>
+        <div class="form-group">
+            <label class="lastName">Last name: {{currentUser.lastName}}</label>
+        </div>
+        <div class="form-group">
+            <label class="cost">Total cost: €{{placeHolder.temple.price}} x {{placeHolder.nights}} nights = €{{totalCost}} </label>
+        </div>
+          <button type="submit" (click) = "postBookingSubmission()" class="btn btn-primary btn-lg btn-block">Agree and book</button>
+          <p class="refund">Cancel within 48 hours of booking to get a full refund. <a href="#">More details</a></p>
+        </form>
+      </div>  <!--Form-->
 
-    </div>  <!--Form-->
-  </div>
+</div>
+
+
 
   <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">

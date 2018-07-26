@@ -5,6 +5,9 @@ import { AppRoutingModule } from '../../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { Booking, BookingService } from '../../booking.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
+import { AuthService } from '../../auth.service';
+
 
 @Component({
   selector: 'app-booking-history',
@@ -27,29 +30,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 
 export class BookingHistoryComponent implements OnInit {
-  // id: string;
   bookings: Array<Booking> = [];
 
   constructor(
-    private myBookingServ: BookingService,
-    // private myActivatedRouteServ: ActivatedRoute,
-    // private myRouterServ: Router
+    private myBookingService: BookingService,
+    private myRouterService: Router,
+    private myAuthService: AuthService
 
   ) { }
 
   ngOnInit() {
-    this.fetchBookings();
-  }
-
-  fetchBookings() {
-    this.myBookingServ.getHistory()
+    this.myBookingService.getHistory()
       .then((response: Array<Booking>) => {
-        // connects the DATA from the API to the COMPONENT state
         this.bookings = response;
+        console.log(this.bookings)
       })
       .catch((err) => {
-        alert("Sorry! We couldn't get our list of bookings. 😕");
-        console.log(err);
-      });
+        console.log(err)
+      })
   }
 }

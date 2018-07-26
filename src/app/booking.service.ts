@@ -29,6 +29,8 @@ export class BookingService {
         { withCredentials: true })
       .toPromise();
   }
+
+
   // POST booking to the database
   postBookingData(dataToBackend) {
     // console.log(dataToBackend)

@@ -3,25 +3,26 @@
     <div id="title">
         My stays
     </div>
-    <div class="container-fluid outer-wrapper">
+    <div class="container-fluid outer-wrapper" >
          <div class="row">
-            <div class="col-sm-4 card">
-                <img class="card-img-top" src="https://res.cloudinary.com/dzblxtdk3/image/upload/v1532512850/Yuzu%20project/Henjokoin/Henjokoin3.jpg" alt="Card image cap">
+            <div class="col-sm-4 card" *ngFor="let oneBooking of bookings">
+                <img class="card-img-top" [src]="oneBooking.templePicture" alt="Card image cap">
                     <div class="card-body">
-                      <h3 class="card-title">Koyasan</h3>
+                      <h3 class="card-title">{{oneBooking.templeName}}</h3>
                         <ul>
-                            <li>2 Nights</li>
+                            <li>{{oneBooking.nights}} Nights</li>
                             <hr/>
-                            <li>2018.08.01</li>
+                            <li>{{oneBooking.date | date:'dd/MM/yyyy'}}</li>
                             <hr/>
-                            <li>2 Guests</li>
+                            <li>{{oneBooking.guests}} Guests</li>
                             <hr/>
-                            <li><i class="fas fa-euro-sign"></i>  180</li>
+                            <li><i class="fas fa-euro-sign"></i>  {{oneBooking.totalCost}}</li>
                         </ul>
                         <a href="#" class="btn btn-primary"></a>
              </div>
             </div>    <!--CARD 1-->
-            <div class="col-sm-4 card">
+
+            <!-- <div class="col-sm-4 card">
                     <img class="card-img-top" src="https://image.freepik.com/free-vector/geometric-grey-background_1055-3147.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h3 class="card-title">Temple Name</h3>
@@ -36,7 +37,7 @@
                             </ul>
                             <a href="#" class="btn btn-primary"></a>
                  </div>
-                </div>    <!--CARD 2-->
+                </div>    -->
 
 
         </div>

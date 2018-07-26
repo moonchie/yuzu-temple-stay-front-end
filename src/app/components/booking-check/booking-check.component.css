@@ -1,0 +1,50 @@
+.fill {
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: "Open Sans";
+    font-size: 1em;
+    color: #161925;
+}
+
+.form-wrapper {
+    border: 1px #759eb8 solid;
+    margin-top: 10vh;
+    padding: 5vh;
+    align-self: center;
+    text-align: center;
+    width: 30%;
+}
+
+
+h1{
+    font-family: "Dosis";
+    font-size: 5vh;
+    font-weight: 800
+}
+
+i{
+    color:#161925;
+    /* border: 1px red solid; */
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    text-align: center;
+}
+
+.refund {
+    padding-top: 2vh;
+    font-size: 80%
+}
+
+.cost {
+    font-weight: 600
+}
+
+.templeName {
+    padding-top: 5vh;
+    font-size: 200%;
+    font-weight: 600;
+    color: #ffc72c
+}
+

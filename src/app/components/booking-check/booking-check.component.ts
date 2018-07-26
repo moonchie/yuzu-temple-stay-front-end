@@ -30,6 +30,7 @@ export class BookingCheckComponent implements OnInit {
     this.myAuthService.check()
     .then(() => {
       this.placeHolder = this.myBookingService.unconfirmedBooking;
+      console.log(this.placeHolder);
       this.currentUser = this.myAuthService.currentUser;
       this.totalCost = this.placeHolder.nights * this.placeHolder.temple.price;
     })
