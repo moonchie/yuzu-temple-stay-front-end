@@ -25,6 +25,7 @@ export class SignupComponent implements OnInit {
       .then((response) => {
         // redirect away to the home page
         this.myRouterServ.navigateByUrl("/");
+        console.log(response)
       })
       .catch((err) => {
         alert("Sorry! We couldn't sign you up. 🧐");
