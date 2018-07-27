@@ -1,13 +1,16 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "Open Sans";
+    color: #161925;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
   }
 
 .fill {
     min-height: 100%;
     height:100%;
-    /* border: 1px orange dashed; */
-    /* for z index */
     position: relative;
 }
 
@@ -40,11 +43,28 @@ h1{
     height: 20vh;
     position:absolute;
     z-index: 2;
-    left: 42vh;
-    top: 90vh;
+    right: -8vh;
+    top: 82vh;
+}
 
-    font-weight: 400;
-    font-size: 1.5vw
+/* button */
+/* .btn-primary{
+    background: #759eb8;
+    color: #f3efe0;
+    border: 1px #f3efe0 solid;
+    padding: 0 5vh
+} */
+
+.btn-primary {
+    background: #759eb8;
+    color:#f3efe0;
+    border: 2px solid #161925;
+    border-bottom-width: 4px;
+    font: inherit;
+    letter-spacing: inherit;
+    font-size: 1em;
+    margin: 1em;
+    padding: 1em 2em;
 }
 
 
@@ -88,7 +108,7 @@ h1{
     height: 80%;
     width: 80%;
     align-self: center;
-    background-image: url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532192891/koyasan5.jpg");
+    background-image: url("http://cdn.touropia.com/gfx/d/castles-in-japan/hikone_castle.jpg?v=8567d8f6424d4264f648dae833f46f13");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -105,5 +125,12 @@ h1{
     background-image: url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532215424/samplemap.png");
     background-size: cover;
     filter: grayscale(1)
+}
+
+.text {
+    padding-top: 10vh;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 

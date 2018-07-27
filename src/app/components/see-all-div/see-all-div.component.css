@@ -46,3 +46,14 @@ a {
     display:inline-block;
     padding: 0vh 5vw
 }
+
+.btn-primary {
+    background: #759eb8;
+    border: 2px solid #161925;
+
+    border-bottom-width: 4px;
+    font: inherit;
+    letter-spacing: inherit;
+    margin: 1em;
+    padding: 1em 2em;
+}

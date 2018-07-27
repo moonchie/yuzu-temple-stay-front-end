@@ -2,6 +2,7 @@
 /* Dropdown menu */
 #drpDownMenu {
     position: fixed;
+    z-index: 2;
     display: block;
     right: 10vh;
     top: 10vh;
@@ -16,6 +17,35 @@
 
 
 
+/* logo */
+
+/* #lotus {
+    width:8em;
+    position: fixed;
+
+} */
+
+#logo {
+    position: fixed;
+    display: block;
+    z-index: 2;
+    /* border: 1px red solid; */
+    left: -5vh;
+    /* top: 5vh; */
+    height: 25vh;
+    width: 25vh;
+    display: block;
+    background-image: url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532692170/Yuzu-logo.svg");
+    background-repeat: none;
+    background-size: cover;
+}
+
+    /* font-family: "Dosis";
+    font-weight: 800;
+    text-align: center; */
+
+
+
 footer{
     margin:0;
     padding:0;
@@ -27,25 +57,13 @@ footer{
 }
 
 /* LOGO and lotus */
-#lotus {
-    width:8em;
-    position: fixed;
-    left: 5vh;
-    top: 5vh;
-}
+
 
 #lotus-animation {
     height: 8%;
     width: 80%;
-    display: inline-block;
-    /* border:1px red solid */
+
 }
 
-#logo {
-    display: inline-block;
-    font-family: "Dosis";
-    font-weight: 800;
-    text-align: center;
-    padding-left: 10px
-}
+
 
