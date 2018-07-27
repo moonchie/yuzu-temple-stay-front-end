@@ -15,15 +15,22 @@ constructor(
   public myAuthService: AuthService
 ){}
 
-ngOnInit(){}
 
-//logout
-// logoutClick(){
-//   this.myAuthService.logout()
-//   .catch((err) => {
-//     alert("babababab")
-//     console.log(err)
-//   })
-// }
+// not sure here??
+ngOnInit(){
+  this.myAuthService.check()
+    .catch((err) => {
+      console.log(err)
+    })
+  }
+
+logout
+logoutClick(){
+  this.myAuthService.logout()
+  .catch((err) => {
+    alert("babababab")
+    console.log(err)
+  })
+}
 
 }

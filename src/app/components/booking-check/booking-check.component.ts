@@ -54,7 +54,7 @@ postBookingSubmission (){
   // pass the data to backend
   this.myBookingService.postBookingData(dataToBackend)
   .then((data)=>{
-    this.myRouteService.navigateByUrl("/");          //<----change
+    this.myRouteService.navigateByUrl("/confirmation");          //<----change
     //confirmation screen
   })
   .catch(( err ) => {
