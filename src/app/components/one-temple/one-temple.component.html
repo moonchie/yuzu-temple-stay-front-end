@@ -9,10 +9,12 @@
     <section-reserve-form [temple]="templeItem" class="form"></section-reserve-form>
 </div>
 
+<!-- map -->
 <div class="container-fluid map-wrapper">
-  <div>Here is a map</div>
+  <div>
+      <agm-map [latitude]="templeItem?.geoLocation[0]" [longitude]="templeItem?.geoLocation[1]">
+          <agm-marker [latitude]="templeItem?.geoLocation[0]" [longitude]="templeItem?.geoLocation[1]" ></agm-marker>
+      </agm-map>
+    </div>
 </div>
 
-
-<!-- ISSUE -->
-<!-- <app-dynamic-form></app-dynamic-form> -->

@@ -15,21 +15,15 @@ constructor(
   public myAuthService: AuthService
 ){}
 
-ngOnInit(){
-  this.myAuthService.check()
-  .catch((err) => {
-    alert("We cant log in you");
-    console.log(err)
-  })
-}
+ngOnInit(){}
 
 //logout
-logoutClick(){
-  this.myAuthService.logout()
-  .catch((err) => {
-    alert("babababab")
-    console.log(err)
-  })
-}
+// logoutClick(){
+//   this.myAuthService.logout()
+//   .catch((err) => {
+//     alert("babababab")
+//     console.log(err)
+//   })
+// }
 
 }

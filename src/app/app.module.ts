@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 // Components
 import { AppComponent } from './app.component';
@@ -60,7 +61,10 @@ import { ReserveFormComponent } from './components/reserve-form/reserve-form.com
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCf_HT48FcYcTDGj-3il8DYk4VhKBAekiU'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

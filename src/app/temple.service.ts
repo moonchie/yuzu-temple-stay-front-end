@@ -45,7 +45,7 @@ export class TempleService {
     bath: string;
     price: number;
     Amentities: Array<object>;
-    pictures: Array<string>;
+    picture: Array<string>;
     geoLocation: Array<number>
   }
 

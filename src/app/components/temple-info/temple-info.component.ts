@@ -19,8 +19,6 @@ export class TempleInfoComponent implements OnInit {
   ngOnInit() {
     this.myActivatedRouteServ.paramMap
       .subscribe((myParams) => {
-        // "phoneId" comes from the route's PATH
-        // { path: "phone/:phoneId", ... }
         this.id = myParams.get("id");
         this.fetchtempleDetails();
       });
@@ -29,7 +27,6 @@ export class TempleInfoComponent implements OnInit {
   fetchtempleDetails() {
     this.myTempleServ.getTempleItem(this.id)
       .then((response: Temple) => {
-        // connects the DATA from the API to the COMPONENT state
         this.templeItem = response;
       })
       .catch((err) => {

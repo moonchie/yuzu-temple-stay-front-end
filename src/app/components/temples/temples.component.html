@@ -17,7 +17,7 @@
         <!--(click)="templeClick(oneTemple._id)"  -->
           <img class="img-thumbnail image" [src]="oneTemple.picture[3]">
           <div class="middle">
-              <a class="text" [routerLink]= "oneTemple._id"  >{{oneTemple.nameENG}} </a>
+              <a class="text" [routerLink]= "['/temple', oneTemple._id]"  >{{oneTemple.nameENG}} </a>
           </div>
        </div>
     </div>

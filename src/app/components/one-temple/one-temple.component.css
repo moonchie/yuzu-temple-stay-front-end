@@ -31,5 +31,9 @@
     margin-top: 5vh;
     /* margin-right: 18%; */
     /* margin-left: 18%; */
+}
 
+/* map */
+agm-map {
+    height: 60vh
 }

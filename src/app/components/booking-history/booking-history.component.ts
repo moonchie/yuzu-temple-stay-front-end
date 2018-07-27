@@ -1,11 +1,8 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { BookingDetailsComponent } from '../booking-details/booking-details.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from '../../app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+
 import { Booking, BookingService } from '../../booking.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Route } from '@angular/compiler/src/core';
+import { Router } from '@angular/router';
+
 import { AuthService } from '../../auth.service';
 
 
@@ -15,19 +12,6 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./booking-history.component.css']
 })
 
-@NgModule({
-  declarations: [
-    BookingHistoryComponent,
-    BookingDetailsComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [BookingHistoryComponent]
-})
 
 export class BookingHistoryComponent implements OnInit {
   bookings: Array<Booking> = [];
