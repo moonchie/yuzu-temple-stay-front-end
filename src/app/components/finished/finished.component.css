@@ -1,10 +1,11 @@
 .fill {
     min-height: 100%;
     height:100%;
-    /* border:1px orange solid; */
     /* background-image: url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532281322/half-noodle_2x.png"); */
     background-repeat: no-repeat;
+    font-family:"Open Sans"
 }
+
 
 #content-wrapper {
     height:100%;
@@ -14,8 +15,9 @@
 }
 
 #content {
-        /* border:1px red dashed;
-        background: lightgrey; */
+        /* /* border:1px red dashed; */
+    background: url("https://res.cloudinary.com/dzblxtdk3/image/upload/v1532281322/half-noodle_2x.png");
+    background-repeat: no-repeat;
     flex-grow: 1;
     text-align: center;
     display: flex;

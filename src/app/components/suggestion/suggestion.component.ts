@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TempleService } from '../../temple.service';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'suggestion-div',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuggestionComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private myTempleService: TempleService,
+    private myAuthService: AuthService,
+  ) { }
 
   ngOnInit() {
+
   }
 
 }

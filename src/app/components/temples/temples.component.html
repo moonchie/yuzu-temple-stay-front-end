@@ -1,12 +1,13 @@
 <section  class="container-fluid row fill">
 
-  <div class="goback"><a routerLink = "/"><i class="fas fa-arrow-left"></i></a></div>
+  <!-- <div class="goback"><a routerLink = "/"><i class="fas fa-arrow-left"></i></a></div> -->
   <div class="col-md-4 text-outter-wrapper">
     <div class="container-fluid row text-container">
           <div class="container text-inner-wrapper" id="title">Top-rated Shukubo </div>
           <div class="container text-inner-wrapper">All temple rooms are planned for a comfortable stay, but if you are not sure about your choice, we will gladly help you find the most suitable</div>
           <div class="container text-inner-wrapper">Highly reviewed by locals and travelers worldwide.</div>
     </div>
+
   </div>    <!--TEXT-->
 
 
@@ -18,6 +19,7 @@
           <img class="img-thumbnail image" [src]="oneTemple.picture[3]">
           <div class="middle">
               <a class="text" [routerLink]= "['/temple', oneTemple._id]"  >{{oneTemple.nameENG}} </a>
+              <p class="location" >{{oneTemple.city}} </p>
           </div>
        </div>
     </div>

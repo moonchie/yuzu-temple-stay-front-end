@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "Open Sans";
-    font-size: 16px
+    font-size: 16px;
   }
 
 .fill {
@@ -77,16 +77,21 @@ img {
     width: 90%;
     height: 90%;
     color:#161925;
-    font-size: 3vh;
+    font-size: 4vh;
     font-weight: 600;
     font-family: "Dosis";
     padding: 16px 32px;
   }
 
-/* go back button */
-.goback {
-    z-index: 1;
-    position: fixed
+.location {
+    display:block;
+    width: 90%;
+    height: 90%;
+    color:#161925;
+    font-size: 2vh;
+    font-weight: 600;
+    font-family: "Open Sans";
+    padding: 16px 32px;
 }
 
 i {
